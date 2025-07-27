@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IMBookmark Options</title>
+  <link rel="stylesheet" type="text/css" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>IMBookmark Settings</h1>
+    <div class="controls">
+      <button id="import-btn" class="btn btn-primary">Import Chrome Bookmarks</button>
+      <button id="index-selected-btn" class="btn btn-success">Index Selected Bookmarks</button>
+      <button id="export-data-btn" class="btn btn-info">Export Bookmark Data</button>
+      <button id="delete-selected-btn" class="btn btn-danger">Delete Selected</button>
+    </div>
+    <p class="total-count">Total Bookmarks: <span id="total-bookmarks-count">0</span></p>
+    <table id="bookmarks-table" class="bookmarks-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th><input type="checkbox" id="select-all"></th>
+          <th>Title</th>
+          <th>URL</th>
+          <th>Status</th>
+          <th>Keywords</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>
