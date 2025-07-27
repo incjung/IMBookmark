@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "콘텐츠 기반 북마크 검색기",
+  "version": "1.2.1",
+  "description": "북마크된 페이지의 콘텐츠를 기반으로 키워드를 추출하고 검색하는 확장 프로그램입니다.",
+  "permissions": [
+    "bookmarks",
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "omnibox": {
+    "keyword": "myurl"
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>북마크 검색</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <!-- 시작 화면 (이전과 동일) -->
+    <div id="welcomeScreen" class="container">
+        <h2>북마크 검색 시작하기</h2>
+        <p>
+            저장된 북마크 페이지들의 콘텐츠를 분석하여 키워드 검색이 가능하도록 인덱스를 생성합니다.
+            이 작업은 처음에 한 번만 수행되며, 이후에는 변경된 내용만 자동으로 동기화됩니다.
+        </p>
+        <button id="startButton">초기 인덱싱 시작</button>
+        <div id="loadingMessage" class="loading-message" style="display: none;">
+            북마크를 처리 중입니다. 잠시만 기다려 주세요...
+        </div>
+    </div>
+
+    <!-- 메인 검색 화면 -->
+    <div id="mainContent" class="container" style="display: none;">
+        <div class="header">
+            <input type="text" id="searchInput" placeholder="키워드 또는 제목으로 검색...">
+            <!-- ★★★ 변경된 부분: title 설명 수정 ★★★ -->
+            <button id="refreshButton" title="새로 추가/삭제된 북마크가 있다면 수동으로 동기화합니다.">🔄</button>
+        </div>
+        <div class="results-header">
+            <div>
+                <input type="checkbox" id="selectAllCheckbox" title="현재 결과 모두 선택">
+                <label for="selectAllCheckbox">전체 선택</label>
+            </div>
+            <span id="resultCount">결과: 0개</span>
+        </div>
+        <ul id="resultsList">
+            <div id="messageArea">북마크를 불러오는 중...</div>
+        </ul>
+        <button id="openSelectedButton" disabled>선택한 북마크 열기</button>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
